@@ -2,6 +2,8 @@ package google.guice.examples;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import google.guice.examples.linked.binding.BillingModule;
+import google.guice.examples.linked.binding.BillingService;
 
 import java.math.BigDecimal;
 import java.util.HashMap;

@@ -1,23 +1,24 @@
-package google.guice.examples;
+package google.guice.examples.linked.binding;
 
 import com.google.inject.Inject;
+import google.guice.examples.Receipt;
 import google.guice.examples.caculator.Calculator;
-import google.guice.examples.logger.ConsoleLogger;
+import google.guice.examples.logger.Logger;
 
 import java.math.BigDecimal;
 
 public class BillingService {
 
-    private ConsoleLogger logger;
+    private Logger logger;
     private Calculator calculator;
 
     @Inject
-    public BillingService(ConsoleLogger logger, Calculator calculator) {
+    BillingService(Logger logger, Calculator calculator) {
         this.logger = logger;
         this.calculator = calculator;
     }
 
-    void cobrarPedido(Receipt receipt){
+    public void cobrarPedido(Receipt receipt){
         BigDecimal total = calculator.calcTotal(receipt);
 
         logger.log("O valor do seu pedido é: R$ " + total.toString());
