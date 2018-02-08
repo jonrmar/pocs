@@ -1,7 +1,7 @@
-package google.guice.examples;
+package google.guice.examples.bindings.linked.binding;
 
+import google.guice.examples.Receipt;
 import google.guice.examples.caculator.Calculator;
-import google.guice.examples.linked.binding.BillingService;
 import google.guice.examples.logger.Logger;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,7 +27,7 @@ public class BillingServiceTest {
     public void cobrarPedidoTest() {
         Mockito.when(calculator.calcTotal(Mockito.any(Receipt.class))).thenReturn(new BigDecimal(10.00));
 
-        billingService.cobrarPedido(mockReceipt());
+        billingService.collectOrder(mockReceipt());
 
         Mockito.verify(calculator, Mockito.times(1)).calcTotal(Mockito.any(Receipt.class));
     }

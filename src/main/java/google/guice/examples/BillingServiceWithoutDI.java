@@ -12,9 +12,9 @@ public class BillingServiceWithoutDI {
     private Logger logger = new ConsoleLogger();
     private Calculator calculator = new OrderCalculator();
 
-    void cobrarPedido(Receipt receipt){
+    void collectOrder(Receipt receipt){
         BigDecimal total = calculator.calcTotal(receipt);
 
-        logger.log("O valor do seu pedido é: R$ " + total.toString());
+        logger.log("The amount of your order is: R$ " + total.toString());
     }
 }

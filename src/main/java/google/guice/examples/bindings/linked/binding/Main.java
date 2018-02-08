@@ -1,9 +1,8 @@
-package google.guice.examples;
+package google.guice.examples.bindings.linked.binding;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import google.guice.examples.linked.binding.BillingModule;
-import google.guice.examples.linked.binding.BillingService;
+import google.guice.examples.Receipt;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -20,7 +19,7 @@ public class Main {
         Receipt receipt = new Receipt();
         receipt.setItens(mockItens());
 
-        billingService.cobrarPedido(receipt);
+        billingService.collectOrder(receipt);
     }
 
     private static Map<String, BigDecimal> mockItens() {

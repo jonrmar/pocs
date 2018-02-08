@@ -1,4 +1,4 @@
-package google.guice.examples.linked.binding;
+package google.guice.examples.bindings.linked.binding;
 
 import com.google.inject.AbstractModule;
 import google.guice.examples.caculator.Calculator;
