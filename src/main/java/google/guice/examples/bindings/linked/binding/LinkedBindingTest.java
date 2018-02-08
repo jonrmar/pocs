@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public class LinkedBindingTest {
 
     public static void main(String[] args) {
 
