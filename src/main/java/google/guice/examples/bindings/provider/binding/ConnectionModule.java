@@ -6,6 +6,6 @@ import com.google.inject.Singleton;
 public class ConnectionModule extends AbstractModule {
     @Override
     protected void configure() {
-        bind(Connection.class).toProvider(ConnectionProvider.class);
+        bind(Connection.class).toProvider(ConnectionProvider.class).in(Singleton.class);
     }
 }

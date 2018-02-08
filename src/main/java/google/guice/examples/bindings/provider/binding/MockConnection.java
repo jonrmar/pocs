@@ -1,5 +1,8 @@
 package google.guice.examples.bindings.provider.binding;
 
+import com.google.inject.Singleton;
+
+@Singleton
 class MockConnection implements Connection {
     @Override
     public void connect() {

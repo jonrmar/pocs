@@ -1,5 +1,6 @@
 package google.guice.examples.bindings.justintime.binding;
 
+
 public class Mobile {
     private String number;
 

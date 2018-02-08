@@ -7,7 +7,7 @@ public class ConnectionProvider implements Provider<MockConnection>{
     public MockConnection get() {
 //        Some customization
         MockConnection connection = new MockConnection();
-//        More cutomization
+//        More customization
         return connection;
     }
 }
